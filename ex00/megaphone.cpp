@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kawai <kawai@student.42.fr>                +#+  +:+       +#+        */
+/*   By: kchan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 21:45:36 by kawai             #+#    #+#             */
-/*   Updated: 2024/03/17 23:47:29 by kawai            ###   ########.fr       */
+/*   Updated: 2024/03/21 12:34:47 by kchan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ int main(int ac, char *argv[])
 			while(argv[i][j]!= '\0')
 			{		
 		 		if(isalpha(argv[i][j]))
-					std::cout << static_cast<char>(std::toupper(argv[i][j]));
+					putchar(toupper(argv[i][j]));
+				else if(isspace(argv[i][j])&& j != 0 && argv[i][j+1] != '\0')
+					putchar(argv[i][j]);
 				else if(!isspace(argv[i][j]))
 					std::cout << (argv[i][j]);
 				j++;
