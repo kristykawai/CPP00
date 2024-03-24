@@ -1,4 +1,4 @@
 *.o
-megaphone
+phonebook
 .DS_Store
 .vscode
