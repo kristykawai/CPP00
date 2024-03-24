@@ -6,7 +6,7 @@
 /*   By: kawai <kawai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 11:38:47 by kawai             #+#    #+#             */
-/*   Updated: 2024/03/24 12:01:42 by kawai            ###   ########.fr       */
+/*   Updated: 2024/03/24 22:14:34 by kawai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ int main()
 
 	while(1)
 	{
-		std::cout << "Commands: ADD, SEARCH, PRINT, EXIT" << std::endl;
+		std::cout << "Commands: ADD, SEARCH, EXIT" << std::endl;
         std::string command;
         std::getline(std::cin, command);
 		if (command == "ADD")
-		{
             phoneBook.add();
-		}
+		else if (command == "SEARCH")	
+			phoneBook.print();
+		else if (command == "EXIT")
+			return (0);
 	}
-	return 0;
+	return (0);
 }

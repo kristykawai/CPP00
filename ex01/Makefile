@@ -2,7 +2,6 @@ NAME := phonebook
 HEADERS := Phonebook.hpp Contact.hpp
 SCRS := main.cpp
 OBJS := $(SCRS:%.cpp=%.o)
-
 CC := c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
